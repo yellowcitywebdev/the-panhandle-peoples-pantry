@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  label: string;
+  title: string;
+  paragraphs: string[];
+  imageSrc: ImageMetadata;
+  altText: string;
+}
+
+const { label, title, paragraphs, imageSrc, altText } = Astro.props;
+---
+
+<div class="flex justify-center py-12 lg:py-2">
+  <div class="flex max-w-screen-xl flex-col-reverse items-center md:flex-row">
+    <div class="h-full w-full px-10 md:w-1/2 lg:px-0">
+      <Image
+        src={imageSrc}
+        alt={altText}
+        class="h-full rounded-lg object-cover"
+      />
+    </div>
+    <div class="px-0 md:w-1/2 lg:pl-10">
+      <div class="text prose">
+        <span
+          class="border-l-2 border-primary-400 pl-2 uppercase text-gray-500 dark:text-gray-200"
+        >
+          {label}
+        </span>
+        <h2 class="sm:text-4x relative my-4 text-3xl font-bold">
+          <div
+            class="inline-block w-full bg-secondary-500 py-4 pl-6 dark:bg-secondary-800"
+          >
+            <span class="text-accent-300">{title}</span>
+          </div>
+        </h2>
+        <div class="text-gray-500 dark:text-gray-200">
+          {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- fix overflow issue  -->

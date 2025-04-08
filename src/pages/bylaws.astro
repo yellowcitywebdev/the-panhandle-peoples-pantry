@@ -1,0 +1,19 @@
+---
+import Container from "../components/Container.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHead from "../components/PageBanner.astro";
+import BylawsComponent from "../components/Bylaws.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const title = "Bylaws";
+const desc = "";
+const image = "/hero-inner.webp";
+---
+
+<BaseLayout title="About Us" description="About Us">
+  <SectionHead title={title} desc={desc} image={image} />
+  <Container>
+    <BylawsComponent />
+  </Container>
+  <CtaBanner />
+</BaseLayout>

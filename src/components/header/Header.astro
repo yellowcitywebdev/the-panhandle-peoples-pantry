@@ -1,0 +1,202 @@
+---
+import Drawer from "./Drawer.astro";
+import Brand from "../BrandHeader.astro";
+---
+
+<Drawer />
+
+<nav
+  class="nav fixed start-0 top-0 z-30 w-full border-gray-200 bg-white transition-all duration-300 ease-in-out dark:border-gray-600 dark:bg-gray-900"
+>
+  <div
+    class="relative mx-auto my-6 flex max-w-screen-xl items-center justify-between p-2 px-6 lg:my-4"
+  >
+    <button
+      type="button"
+      class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
+      aria-expanded="false"
+      data-drawer-target="drawer-navigation-left"
+      data-drawer-show="drawer-navigation-left"
+      aria-controls="drawer-navigation-left"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="h-5 w-5"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+
+    <div class="absolute left-1/2 -translate-x-1/2 transform lg:flex lg:w-auto">
+      <Brand />
+    </div>
+
+    <div class="ml-20 hidden space-x-8 text-xl font-light uppercase lg:flex">
+      <ul
+        class="mt-4 flex flex-col p-4 md:mt-0 md:flex-row md:space-x-8 md:p-0"
+      >
+        <li>
+          <a
+            href="/about"
+            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            aria-current="page">About us</a
+          >
+        </li>
+        <li>
+          <a
+            href="/membership"
+            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            aria-current="page">Membership</a
+          >
+        </li>
+        <li>
+          <a
+            href="/shop"
+            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            aria-current="page">Shop</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="hidden space-x-8 text-xl font-light uppercase lg:flex">
+      <ul
+        class="mt-4 flex flex-col p-4 md:mt-0 md:flex-row md:space-x-8 md:p-0"
+      >
+        <li>
+          <a
+            href="/donations"
+            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            aria-current="page">Donations</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact"
+            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            aria-current="page">Contact Us</a
+          >
+        </li>
+        <li>
+          <button
+            id="dropdownNavbarLink"
+            data-dropdown-toggle="dropdownNavbar"
+            data-dropdown-trigger="hover"
+            data-dropdown-offset-distance="8"
+            class="flex h-20 w-full items-center px-3 py-2 uppercase text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            >Legal
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            id="dropdownNavbar"
+            class="dark:bg-gray-00 z-10 hidden divide-y divide-gray-100 bg-white text-xl font-light shadow-sm dark:divide-gray-600"
+          >
+            <ul
+              class="py-2 text-gray-700 dark:text-gray-400"
+              aria-labelledby="dropdownLargeButton"
+            >
+              <li>
+                <a
+                  href="/bylaws"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  >Bylaws</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/codeofconduct"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  >Code of Conduct</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/financials"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  >Financials</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <div class="ml-8 pt-5">
+          <div class="mb-4 ml-2 mr-4 h-5 w-5">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="theme toggle"
+              class="rounded-lg p-2.5 text-sm text-gray-500 hover:bg-gray-100 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+              <svg
+                id="theme-toggle-dark-icon"
+                class="hidden h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path></svg
+              >
+              <svg
+                id="theme-toggle-light-icon"
+                class="hidden h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                ><path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"></path></svg
+              >
+            </button>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- <script is:inline>
+  window.addEventListener("scroll", (e) => {
+    const nav = document.querySelector(".nav");
+    if (window.scrollY) {
+      nav?.classList.add("shadow-xl");
+    } else {
+      nav?.classList.remove("shadow-xl");
+    }
+  });
+</script> -->
+
+<script is:inline>
+  window.addEventListener("scroll", (e) => {
+    const nav = document.querySelector(".nav");
+    if (window.scrollY) {
+      nav?.classList.add("shadow");
+    } else {
+      nav?.classList.remove("shadow");
+    }
+  });
+
+  let lastScrollY = window.scrollY;
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      nav.classList.add("-translate-y-full");
+    } else if (currentScrollY < lastScrollY) {
+      nav.classList.remove("-translate-y-full");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

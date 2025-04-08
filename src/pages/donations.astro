@@ -1,0 +1,108 @@
+---
+import Containter from "../components/Container.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHead from "../components/PageBanner.astro";
+import AboutBody from "../components/AboutBody.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const title = "Donations";
+const desc = "";
+const image = "/hero-inner.webp";
+---
+
+<BaseLayout title="About Us" description="About Us">
+  <SectionHead title={title} desc={desc} image={image} />
+  <Containter>
+    <div
+      class="mx-auto max-w-4xl rounded-lg bg-white p-6 py-24 text-black dark:bg-gray-800 dark:text-white"
+    >
+      <h1 class="text-center text-3xl font-bold text-primary-700">
+        Support P³: Donations
+      </h1>
+
+      <!-- Types of Donations -->
+      <section class="mt-6">
+        <h2 class="text-2xl font-semibold text-primary-600">
+          What Donations We Accept
+        </h2>
+        <p>
+          Your support helps us provide fresh, nutritious food to our community.
+          We gladly accept:
+        </p>
+        <ul class="mt-4 list-disc pl-6">
+          <li>
+            <strong>Monetary Donations:</strong> Helps us purchase food and cover
+            operational costs.
+          </li>
+          <li>
+            <strong>Non-Perishable Foods:</strong> Canned goods, rice, pasta, dried
+            beans, and more.
+          </li>
+          <li>
+            <strong>Fresh Produce:</strong> Fruits, vegetables, and herbs from local
+            gardens.
+          </li>
+          <li>
+            <strong>Personal Care Items:</strong> Soap, toothpaste, deodorant, and
+            hygiene products.
+          </li>
+          <li>
+            <strong>Reusable Bags & Containers:</strong> Helps us reduce waste and
+            distribute food sustainably.
+          </li>
+        </ul>
+      </section>
+
+      <!-- How to Deliver Donations -->
+      <section class="mt-6">
+        <h2 class="text-2xl font-semibold text-primary-600">
+          How to Deliver Your Donation
+        </h2>
+        <p>You can drop off donations at the following locations:</p>
+        <ul class="mt-4 list-disc pl-6">
+          <li>
+            <strong>Main Distribution Center:</strong> 1234 Main St, Somewhere, TX
+            78910
+          </li>
+          <li>
+            <strong>Partner Locations:</strong> Various community hubs – contact
+            us for details.
+          </li>
+          <li>
+            <strong>By Appointment:</strong> Schedule a time for large donations
+            or special arrangements.
+          </li>
+        </ul>
+        <p class="mt-4">
+          For questions or to arrange a pickup, <a
+            href="contact.html"
+            class="text-primary-500 hover:underline">contact us</a
+          > today!
+        </p>
+      </section>
+
+      <!-- Other Ways to Support -->
+      <section class="mt-6">
+        <h2 class="text-2xl font-semibold text-primary-600">
+          Other Ways to Support
+        </h2>
+        <ul class="mt-4 list-disc pl-6">
+          <li>
+            <strong>Volunteer:</strong> Help us distribute food and support our mission.
+          </li>
+          <li>
+            <strong>Spread the Word:</strong> Share our mission with friends, family,
+            and local businesses.
+          </li>
+        </ul>
+      </section>
+
+      <footer class="mt-8 text-center text-sm text-gray-500 dark:text-gray-300">
+        <p>
+          Thank you for supporting food liberation and community empowerment!
+        </p>
+      </footer>
+    </div>
+  </Containter>
+  <CtaBanner />
+</BaseLayout>

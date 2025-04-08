@@ -1,0 +1,52 @@
+---
+import FeatureLeft from "../components/FeatureLeft.astro";
+import FeatureRight from "../components/FeatureRight.astro";
+
+import localFeatureImage from "../../public/local.webp";
+import sustainabilityFeatureImage from "../../public/sustainability.webp";
+import benefitsFeatureImage from "../../public/benefits.webp";
+import communityFeatureImage from "../../public/community.webp";
+---
+
+<div class="py-20">
+  <FeatureLeft
+    label="Local"
+    title="Local Sourcing"
+    paragraphs={[
+      "We prioritize locally sourced food by partnering with regional farmers and suppliers to ensure fresh, seasonal ingredients while supporting our local economy.",
+      "Sourcing locally reduces our carbon footprint, promotes sustainable farming, and strengthens community connections, ensuring better food for everyone.",
+    ]}
+    imageSrc={localFeatureImage}
+    altText="a field of wheat"
+  />
+  <FeatureRight
+    label="Sustainability"
+    title="Sustainable Practices"
+    paragraphs={[
+      "We are committed to sustainability by sourcing responsibly, minimizing waste, and prioritizing eco-friendly practices in every step of our food journey.",
+      "From local partnerships to composting and reusable packaging, we strive to reduce our impact and create a more sustainable future for our community. ",
+    ]}
+    imageSrc={sustainabilityFeatureImage}
+    altText="a hand holding a seedling"
+  />
+  <FeatureLeft
+    label="Co-op"
+    title="Membership Benefits"
+    paragraphs={[
+      "As a member of our co-op, you gain access to fresh, locally sourced food at discounted prices, while supporting a community-driven initiative. ",
+      "Members enjoy exclusive benefits, such as voting rights, special events, and the opportunity to shape the future of our food system. ",
+    ]}
+    imageSrc={benefitsFeatureImage}
+    altText="Volunteers loading tubs of food"
+  />
+  <FeatureRight
+    label="For us, by us"
+    title="Community Involvement"
+    paragraphs={[
+      "We believe in the power of community. Through outreach programs, volunteer opportunities, and direct action, we work together to address food insecurity and support local initiatives.",
+      " By engaging with our neighbors and fostering collaboration, we strive to create a stronger, more connected community where everyone has access to healthy food.",
+    ]}
+    imageSrc={communityFeatureImage}
+    altText="a group of volunteers posing for a photo"
+  />
+</div>

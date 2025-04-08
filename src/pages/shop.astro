@@ -1,0 +1,30 @@
+---
+import Containter from "../components/Container.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHead from "../components/PageBanner.astro";
+import AboutBody from "../components/AboutBody.astro";
+import CtaBanner from "../components/CtaBanner.astro";
+
+const title = "Shop";
+const desc = "";
+const image = "/hero-inner.webp";
+---
+
+<BaseLayout title="About Us" description="About Us">
+  <SectionHead title={title} desc={desc} image={image} />
+  <Containter>
+    <div class="flex min-h-[calc(100vh-16rem)] items-center justify-center">
+      <div class="mt-16 text-center">
+        <h1
+          class="text-4xl font-bold text-gray-900 dark:text-white lg:text-5xl lg:tracking-tight"
+        >
+          Online shop coming soon
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          Call us if you need something delivered.
+        </p>
+      </div>
+    </div>
+  </Containter>
+  <CtaBanner />
+</BaseLayout>

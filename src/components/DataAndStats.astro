@@ -1,0 +1,111 @@
+---
+
+---
+
+<div class="relative flex justify-center py-2">
+  <!-- Stats Container -->
+  <div
+    class="relative rounded-xl px-6 py-8 shadow-lg shadow-gray-400 dark:shadow-gray-900"
+    style="background: url('../PurpleWaves.svg');
+      background-size: 140px 16px;
+      background-position: center;
+      background-repeat: repeat;"
+  >
+    <div class="flex flex-wrap">
+      <!-- Members Counter -->
+      <div
+        class="relative w-full border-r border-gray-200 px-6 md:w-6/12 lg:w-4/12"
+      >
+        <div class="py-2 text-center">
+          <h4
+            class="counter text-5xl font-extrabold leading-tight text-white"
+            data-target="20"
+            data-type="plus"
+          >
+            0+
+          </h4>
+          <h5 class="mb-1 mt-2 text-xl font-semibold text-white">Members</h5>
+          <p class="text-md text-gray-200">
+            We are adding new members at an accelerating rate.
+          </p>
+        </div>
+      </div>
+
+      <!-- Saved Counter -->
+      <div
+        class="relative w-full border-r px-6 dark:border-gray-700 md:w-6/12 lg:w-4/12 lg:border-gray-200"
+      >
+        <div class="py-2 text-center">
+          <h4
+            class="counter text-5xl font-extrabold leading-tight text-white"
+            data-target="2000"
+            data-type="dollar"
+          >
+            $0
+          </h4>
+          <h5 class="mb-1 mt-2 text-xl font-semibold text-white">Saved</h5>
+          <p class="text-md text-gray-200">
+            We save over $25,000 consistently, each year.
+          </p>
+        </div>
+      </div>
+
+      <!-- Total Counter -->
+      <div class="relative w-full px-6 md:w-6/12 lg:w-4/12">
+        <div class="py-2 text-center">
+          <h4
+            class="counter text-5xl font-extrabold leading-tight text-white"
+            data-target="6000"
+            data-type="dollar"
+          >
+            $0
+          </h4>
+          <h5 class="mb-1 mt-2 text-xl font-semibold text-white">Total</h5>
+          <p class="text-md text-gray-200">
+            Since we opened our doors, we've passed over 1/2 million dollars in
+            savings on to our members.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    let observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            let counter = entry.target;
+            let target = +counter.getAttribute("data-target");
+            let type = counter.getAttribute("data-type"); // Determine formatting
+            let count = 0;
+            let step = Math.ceil(target / 100); // Control speed
+            let interval = setInterval(() => {
+              count += step;
+              if (count >= target) {
+                counter.textContent = formatNumber(target, type); // Final formatted value
+                clearInterval(interval);
+              } else {
+                counter.textContent = formatNumber(count, type);
+              }
+            }, 25); // Adjust speed
+            observer.unobserve(counter); // Stop observing after animation
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    counters.forEach((counter) => observer.observe(counter));
+
+    function formatNumber(num, type) {
+      let formattedNum = num.toLocaleString(); // Format with commas (e.g., 25,000)
+      if (type === "plus") return formattedNum + "+"; // Add + for members
+      if (type === "dollar") return "$" + formattedNum; // Add $ for money
+      return formattedNum;
+    }
+  });
+</script>
