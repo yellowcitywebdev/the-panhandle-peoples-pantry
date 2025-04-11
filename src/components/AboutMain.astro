@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import AboutCard from "../components/AboutCard.astro";
+import aboutImage from "../../public/about-us.webp";
+---
+
+<div class="flex justify-center pt-12">
+  <AboutCard
+    imageSrc={aboutImage}
+    altText="a field of wheat"
+    label="About Us"
+    borderColor="border-primary-500"
+    title="Panhandle People's Pantry"
+    titleColor="text-accent-300"
+    paragraphs={[
+      "The Panhandle People's Pantry, founded in 2025, is a community-led food co-op ensuring access to fresh, nutritious food through local partnerships.",
+      "We believe healthy food is a right. Our mission is to connect communities with quality ingredients and promote sustainable, ethical food access.",
+    ]}
+    backgroundColor="bg-secondary-600 dark:bg-secondary-800"
+    imageSide="left"
+  />
+</div>

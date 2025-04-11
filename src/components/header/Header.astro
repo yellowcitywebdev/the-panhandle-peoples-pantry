@@ -1,6 +1,8 @@
 ---
 import Drawer from "./Drawer.astro";
 import Brand from "../BrandHeader.astro";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <Drawer />
@@ -46,21 +48,33 @@ import Brand from "../BrandHeader.astro";
         <li>
           <a
             href="/about"
-            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 items-center px-3 py-2 md:p-0 ${
+              currentPath === "/about"
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             aria-current="page">About us</a
           >
         </li>
         <li>
           <a
             href="/membership"
-            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 items-center px-3 py-2 md:p-0 ${
+              currentPath === "/membership"
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             aria-current="page">Membership</a
           >
         </li>
         <li>
           <a
             href="/shop"
-            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 items-center px-3 py-2 md:p-0 ${
+              currentPath === "/shop"
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             aria-current="page">Shop</a
           >
         </li>
@@ -74,14 +88,22 @@ import Brand from "../BrandHeader.astro";
         <li>
           <a
             href="/donations"
-            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 items-center px-3 py-2 md:p-0 ${
+              currentPath === "/donations"
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             aria-current="page">Donations</a
           >
         </li>
         <li>
           <a
             href="/contact"
-            class="flex h-20 w-full items-center px-3 py-2 text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 items-center px-3 py-2 md:p-0 ${
+              currentPath === "/contact"
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             aria-current="page">Contact Us</a
           >
         </li>
@@ -91,13 +113,17 @@ import Brand from "../BrandHeader.astro";
             data-dropdown-toggle="dropdownNavbar"
             data-dropdown-trigger="hover"
             data-dropdown-offset-distance="8"
-            class="flex h-20 w-full items-center px-3 py-2 uppercase text-gray-700 hover:text-primary-600 dark:text-white dark:hover:text-primary-400 md:p-0"
+            class={`flex h-20 uppercase items-center px-3 py-2 md:p-0 ${
+              ["/bylaws", "/codeofconduct", "/financials"].includes(currentPath)
+                ? "text-primary-500 dark:text-primary-500"
+                : "text-gray-700 dark:text-white"
+            } hover:text-primary-600 dark:hover:text-primary-400`}
             >Legal
           </button>
           <!-- Dropdown menu -->
           <div
             id="dropdownNavbar"
-            class="dark:bg-gray-00 z-10 hidden divide-y divide-gray-100 bg-white text-xl font-light shadow-sm dark:divide-gray-600"
+            class="z-10 hidden divide-y divide-gray-100 bg-white text-xl font-light shadow-sm dark:divide-gray-800 dark:bg-gray-900"
           >
             <ul
               class="py-2 text-gray-700 dark:text-gray-400"
@@ -106,21 +132,21 @@ import Brand from "../BrandHeader.astro";
               <li>
                 <a
                   href="/bylaws"
-                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:text-primary-400"
                   >Bylaws</a
                 >
               </li>
               <li>
                 <a
                   href="/codeofconduct"
-                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:text-primary-400"
                   >Code of Conduct</a
                 >
               </li>
               <li>
                 <a
                   href="/financials"
-                  class="block px-4 py-2 hover:text-primary-600 dark:hover:bg-gray-600 dark:hover:text-primary-400"
+                  class="block px-4 py-2 hover:text-primary-600 dark:hover:text-primary-400"
                   >Financials</a
                 >
               </li>

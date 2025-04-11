@@ -1,9 +1,13 @@
 ---
-import Containter from "../components/Container.astro";
+import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/PageBanner.astro";
-import AboutBody from "../components/AboutBody.astro";
+import AboutCard from "../components/AboutCard.astro";
 import CtaBanner from "../components/CtaBanner.astro";
+import CallToActionWidget from "../components/CallToActionWidget.astro";
+import DataAndStats from "../components/DataAndStats.astro";
+
+import aboutImage from "../../public/about-us.webp";
 
 const title = "About Us";
 const desc = "";
@@ -12,8 +16,56 @@ const image = "/hero-inner.webp";
 
 <BaseLayout title="About Us" description="About Us">
   <SectionHead title={title} desc={desc} image={image} />
-  <Containter>
-    <AboutBody />
-  </Containter>
+  <Container>
+    <div class="py-8">
+      <AboutCard
+        imageSrc={aboutImage}
+        altText="a field of wheat"
+        label="About Us"
+        borderColor="border-primary-500"
+        title="Panhandle People's Pantry"
+        titleColor="text-accent-300"
+        paragraphs={[
+          "The Panhandle People's Pantry, founded in 2025, is a community-led food co-op ensuring access to fresh, nutritious food through local partnerships.",
+          "We believe healthy food is a right. Our mission is to connect communities with quality ingredients and promote sustainable, ethical food access.",
+        ]}
+        backgroundColor="bg-secondary-600 dark:bg-secondary-800"
+        imageSide="left"
+      />
+
+      <AboutCard
+        imageSrc={aboutImage}
+        altText="a field of wheat"
+        label="Our Vision"
+        borderColor="border-primary-500"
+        title="Empowering Communities Through Food"
+        titleColor="text-accent-300"
+        paragraphs={[
+          "We envision a future where fresh, healthy food is accessible to all. Through local partnerships, we strengthen community ties and promote wellness.",
+          "Food is more than nourishment — it's a connection. We believe in building a food system that supports people and the planet.",
+        ]}
+        backgroundColor="bg-secondary-500 dark:bg-secondary-700"
+        imageSide="right"
+      />
+
+      <AboutCard
+        imageSrc={aboutImage}
+        altText="a field of wheat"
+        label="Our Values"
+        borderColor="border-primary-500"
+        title="Sustainability, Equity, and Community"
+        titleColor="text-accent-300"
+        paragraphs={[
+          "We are committed to supporting local growers, reducing waste, and protecting natural resources through sustainable practices.",
+          "Our work centers on equity and inclusion, ensuring that everyone has a seat at the table and access to the food they deserve.",
+        ]}
+        backgroundColor="bg-secondary-400 dark:bg-secondary-600"
+        imageSide="left"
+      />
+
+      <CallToActionWidget />
+      <DataAndStats />
+    </div>
+  </Container>
   <CtaBanner />
 </BaseLayout>

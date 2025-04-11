@@ -1,8 +1,7 @@
 ---
-import Containter from "../components/Container.astro";
+import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/PageBanner.astro";
-import AboutBody from "../components/AboutBody.astro";
 import CtaBanner from "../components/CtaBanner.astro";
 
 const title = "Food fuels the revolution";
@@ -12,7 +11,7 @@ const image = "/hero-inner.webp";
 
 <BaseLayout title="Food is a human right" description="About Us">
   <SectionHead title={title} desc={desc} image={image} />
-  <Containter class="flex flex-col items-center justify-center bg-primary-900">
+  <Container class="flex flex-col items-center justify-center bg-primary-900">
     <!-- <div class="h-96">shop</div> -->
 
     <svg
@@ -181,6 +180,6 @@ const image = "/hero-inner.webp";
     <p class="-mt-32 pb-20 text-center text-7xl font-extrabold text-black">
       Food is a Human Right
     </p>
-  </Containter>
+  </Container>
   <CtaBanner />
 </BaseLayout>

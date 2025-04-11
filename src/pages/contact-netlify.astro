@@ -1,5 +1,5 @@
 ---
-import Containter from "../components/Container.astro";
+import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HeroInner from "../components/PageBanner.astro";
 import ContactForm from "../components/ContactForm.astro";
@@ -11,7 +11,7 @@ const image = "/hero-inner.webp";
 
 <BaseLayout title="Contact Us" description="Contact Us">
   <HeroInner title={title} desc={desc} image={image} />
-  <Containter>
+  <Container>
     <ContactForm />
-  </Containter>
+  </Container>
 </BaseLayout>

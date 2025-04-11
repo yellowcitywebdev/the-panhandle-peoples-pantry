@@ -2,21 +2,19 @@
 import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
-import FeatureWidget from "../components/FeatureWidget.astro";
-import AboutBody from "../components/AboutBody.astro";
+import AboutMain from "../components/AboutMain.astro";
 import CtaBanner from "../components/CtaBanner.astro";
 import FeatureSection from "../components/FeatureSection.astro";
-import DataAndStats from "../components/DataAndStats.astro";
 import CallToActionWidget from "../components/CallToActionWidget.astro";
+import DataAndStats from "../components/DataAndStats.astro";
 ---
 
 <BaseLayout title="The Panhandle People's Pantry">
   <Hero />
   <Container>
-    <AboutBody />
+    <AboutMain />
   </Container>
   <Container>
-    <!-- <FeatureHead /> -->
     <FeatureSection />
     <CallToActionWidget />
     <DataAndStats />

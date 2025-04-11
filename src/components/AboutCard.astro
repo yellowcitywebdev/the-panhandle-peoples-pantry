@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  imageSrc: ImageMetadata;
+  altText: string;
+  label: string;
+  borderColor: string;
+  title: string;
+  titleColor: string;
+  paragraphs: string[];
+  backgroundColor: string;
+  imageSide?: "left" | "right";
+}
+
+const {
+  imageSrc,
+  altText,
+  label,
+  borderColor,
+  title,
+  titleColor,
+  paragraphs,
+  backgroundColor,
+  imageSide = "right",
+} = Astro.props;
+
+const isLeft = imageSide === "right";
+---
+
+<div class="flex justify-center py-5">
+  <div
+    class={[
+      "flex max-w-screen-xl flex-col items-center rounded-lg  shadow-lg shadow-gray-300  dark:shadow-gray-900 md:flex-row",
+      backgroundColor,
+      isLeft && "md:flex-row-reverse",
+    ]
+      .filter(Boolean)
+      .join(" ")}
+  >
+    <div class="h-full w-full md:w-1/2">
+      <Image
+        src={imageSrc}
+        alt={altText}
+        class={[
+          "h-full rounded-t-lg md:rounded-t-none object-cover ",
+          isLeft ? "md:rounded-r-lg" : "md:rounded-l-lg",
+        ].join(" ")}
+      />
+    </div>
+    <div class="w-full p-10 md:w-1/2">
+      <div class="text prose">
+        <span
+          class={["border-l-2 pl-2 uppercase text-gray-100 ", borderColor].join(
+            " ",
+          )}
+        >
+          {label}
+        </span>
+        <h2
+          class="my-4 text-3xl font-bold text-gray-600 dark:text-white sm:text-4xl"
+        >
+          <span class={[" ", titleColor].join(" ")}>{title}</span>
+        </h2>
+        <div class="text-lg text-white">
+          {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

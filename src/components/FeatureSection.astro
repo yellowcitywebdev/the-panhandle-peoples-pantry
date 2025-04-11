@@ -1,6 +1,5 @@
 ---
-import FeatureLeft from "../components/FeatureLeft.astro";
-import FeatureRight from "../components/FeatureRight.astro";
+import FeatureCard from "../components/FeatureCard.astro";
 
 import localFeatureImage from "../../public/local.webp";
 import sustainabilityFeatureImage from "../../public/sustainability.webp";
@@ -8,8 +7,8 @@ import benefitsFeatureImage from "../../public/benefits.webp";
 import communityFeatureImage from "../../public/community.webp";
 ---
 
-<div class="py-20">
-  <FeatureLeft
+<div class="pb-12 pt-0">
+  <FeatureCard
     label="Local"
     title="Local Sourcing"
     paragraphs={[
@@ -17,9 +16,10 @@ import communityFeatureImage from "../../public/community.webp";
       "Sourcing locally reduces our carbon footprint, promotes sustainable farming, and strengthens community connections, ensuring better food for everyone.",
     ]}
     imageSrc={localFeatureImage}
-    altText="a field of wheat"
+    altText="a stall full of fresh veggies"
+    imageSide="right"
   />
-  <FeatureRight
+  <FeatureCard
     label="Sustainability"
     title="Sustainable Practices"
     paragraphs={[
@@ -28,8 +28,9 @@ import communityFeatureImage from "../../public/community.webp";
     ]}
     imageSrc={sustainabilityFeatureImage}
     altText="a hand holding a seedling"
+    imageSide="left"
   />
-  <FeatureLeft
+  <FeatureCard
     label="Co-op"
     title="Membership Benefits"
     paragraphs={[
@@ -38,8 +39,9 @@ import communityFeatureImage from "../../public/community.webp";
     ]}
     imageSrc={benefitsFeatureImage}
     altText="Volunteers loading tubs of food"
+    imageSide="right"
   />
-  <FeatureRight
+  <FeatureCard
     label="For us, by us"
     title="Community Involvement"
     paragraphs={[
@@ -48,5 +50,6 @@ import communityFeatureImage from "../../public/community.webp";
     ]}
     imageSrc={communityFeatureImage}
     altText="a group of volunteers posing for a photo"
+    imageSide="left"
   />
 </div>
