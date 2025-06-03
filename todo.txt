@@ -1,6 +1,5 @@
 Things I still need for site
 
-Header - need logo, fix menu item highlighting
 Home page - feedback
 About Us page - feedback, make text more personal?
 Membership page - email set up to receive forms
@@ -11,8 +10,19 @@ Legal menu
     Bylaws - feedback
     Code of Conduct - need stuff
     Financials - need stuff
-Footer - need logo, extra info, check links, actual contact info, links to socials
-Misc - overall feedback, real images(stock may be good for now), check text, proofread, favicon(logo)
+Footer - extra info, actual contact info, links to socials
+Misc - overall feedback, real images(stock may be good for now), check text, proofread
 
 Todo:
 Share Card - fix image and text
+add logo: https://drive.google.com/drive/folders/1RWsREB6daGMpjibFpfstxfnCVa2SdPXx
+
+
+
+Phase 1:
+go over verbiage on all pages
+what all socials are we planning on using for links
+confirm contact info(email for membership, email for contact, address)
+graphics for fb banner, and website share care
+address
+fb link
