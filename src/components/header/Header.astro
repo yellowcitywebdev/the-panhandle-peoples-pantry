@@ -50,11 +50,13 @@ const currentPath = Astro.url.pathname;
             href="/about"
             class={`flex h-20 items-center px-3 py-2 md:p-0 ${
               currentPath === "/about"
-                ? "text-primary-500 dark:text-primary-500"
+                ? "active"
                 : "text-gray-700 dark:text-white"
             } hover:text-primary-600 dark:hover:text-primary-400`}
-            aria-current="page">About us</a
+            aria-current={currentPath === "/about" ? "page" : undefined}
           >
+            About us
+          </a>
         </li>
         <li>
           <a
