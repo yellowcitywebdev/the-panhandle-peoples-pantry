@@ -226,15 +226,3 @@ const currentPath = Astro.url.pathname;
     lastScrollY = currentScrollY;
   });
 </script>
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll("nav a[href]");
-    const current = window.location.pathname;
-
-    links.forEach((link) => {
-      if (link.getAttribute("href") === current) {
-        link.classList.add("text-primary-500", "dark:text-primary-500");
-      }
-    });
-  });
-</script>
