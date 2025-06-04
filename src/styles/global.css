@@ -175,7 +175,3 @@ body {
 .logo {
   font-family: "Roboto", system-ui;
 }
-
-.active {
-  @apply text-primary-500 dark:text-primary-500;
-}
