@@ -2,7 +2,7 @@
 import Drawer from "./Drawer.astro";
 import Brand from "../BrandHeader.astro";
 
-const currentPath = Astro.url.pathname;
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <Drawer />
