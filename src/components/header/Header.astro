@@ -2,7 +2,7 @@
 import Drawer from "./Drawer.astro";
 import Brand from "../BrandHeader.astro";
 
-const currentPath = new URL(Astro.request.url).pathname;
+const currentPath = Astro.url.pathname;
 ---
 
 <Drawer />
@@ -224,5 +224,17 @@ const currentPath = new URL(Astro.request.url).pathname;
     }
 
     lastScrollY = currentScrollY;
+  });
+</script>
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav a[href]");
+    const current = window.location.pathname;
+
+    links.forEach((link) => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("text-primary-500", "dark:text-primary-500");
+      }
+    });
   });
 </script>
