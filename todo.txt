@@ -2,16 +2,16 @@ Things I still need for site
 
 Home page - feedback
 About Us page - feedback, make text more personal?
-Membership page - email set up to receive forms - gnat
+Membership page - feedback
 Shop page - "coming soon"
 Donations page - feedback
-Contact Us - email set up to receive forms, actual contact info - gnat
+Contact Us - feedback
 Legal menu
     Bylaws - feedback
-    Code of Conduct - need stuff
+    Code of Conduct - need stuff - next - friday
     Financials - "coming soon"
 Footer - feedback
-Misc - overall feedback, real images(stock may be good for now), check text, proofread, fix navlinks highlighting
+Misc - overall feedback, real images(stock may be good for now), check text, proofread, fix navlinks highlighting(prob later)
 
 resources: https://drive.google.com/drive/folders/1RWsREB6daGMpjibFpfstxfnCVa2SdPXx
 
@@ -23,3 +23,23 @@ confirm contact info(email for contact)
 
 phase 2:
 figure out contact form, membership form route and hosting
+
+phase 3(rev.. 2):
+formatting CoC
+- still need from @smads
+buying domain
+- namecheap or porkbun
+- I have an account on namecheap already
+Hosting(gnat or roux)
+- @Gnat has a paid Digital Ocean account I believe
+    - will need to figure out form environmental variables all over again
+    - testing forms one more time
+- @roux has a free tier account on Netlify
+    - limited traffic but should be ok starting up
+    - I charge $25-30 for hosting but haven't had any takers
+        - if y'all wanted to pay, I'm willing to go with the base cost($19)
+    - If traffic becomes an issue, willing to pay the $19 it actually costs to upgrade to paid tier for time being
+    - form environmental variable already in place so I just need Domain name and point at site
+- my days available(Tues all day, Wed most of the day, Fri all day)
+    - I'd like to see it live by Fri if possible
+- start compiling list for next phase(shop page etc.)

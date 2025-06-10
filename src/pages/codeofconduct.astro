@@ -2,6 +2,8 @@
 import Container from "../components/Container.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionHead from "../components/PageBanner.astro";
+import CodeOfConductComponent from "../components/CodeOfConduct.astro";
+
 import CtaBanner from "../components/CtaBanner.astro";
 
 const title = "Code of Conduct";
@@ -12,7 +14,7 @@ const image = "/hero-inner.webp";
 <BaseLayout title="About Us" description="About Us">
   <SectionHead title={title} desc={desc} image={image} />
   <Container>
-    <div class="h-96">Code of Conduct</div>
+    <CodeOfConductComponent />
   </Container>
   <CtaBanner />
 </BaseLayout>
