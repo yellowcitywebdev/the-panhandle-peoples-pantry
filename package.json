@@ -2,6 +2,11 @@
   "name": "master-template",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": "20.11.1",
+    "pnpm": "8.15.6"
+  },
+  "packageManager": "pnpm@10.12.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
