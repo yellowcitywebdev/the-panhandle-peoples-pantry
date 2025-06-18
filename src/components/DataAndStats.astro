@@ -1,5 +1,9 @@
 ---
-
+const countersData = {
+  members: 1,
+  savedYear: 0,
+  savedTotal: 0,
+};
 ---
 
 <div class="relative flex justify-center py-2">
@@ -19,7 +23,7 @@
         <div class="py-2 text-center">
           <h4
             class="counter text-5xl font-extrabold leading-tight text-white"
-            data-target="20"
+            data-target={countersData.members}
             data-type="plus"
           >
             0+
@@ -38,7 +42,7 @@
         <div class="py-2 text-center">
           <h4
             class="counter text-5xl font-extrabold leading-tight text-white"
-            data-target="2000"
+            data-target={countersData.savedYear}
             data-type="dollar"
           >
             $0
@@ -55,7 +59,7 @@
         <div class="py-2 text-center">
           <h4
             class="counter text-5xl font-extrabold leading-tight text-white"
-            data-target="6000"
+            data-target={countersData.savedTotal}
             data-type="dollar"
           >
             $0
