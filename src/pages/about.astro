@@ -8,6 +8,8 @@ import CallToActionWidget from "../components/CallToActionWidget.astro";
 import DataAndStats from "../components/DataAndStats.astro";
 
 import aboutImage from "../../public/about-us.webp";
+import visionImage from "../../public/vision.webp";
+import valuesImage from "../../public/values.webp";
 
 const title = "About Us";
 const desc = "";
@@ -34,7 +36,7 @@ const image = "/hero-inner.webp";
       />
 
       <AboutCard
-        imageSrc={aboutImage}
+        imageSrc={visionImage}
         altText="a field of wheat"
         label="Our Vision"
         borderColor="border-primary-500"
@@ -49,7 +51,7 @@ const image = "/hero-inner.webp";
       />
 
       <AboutCard
-        imageSrc={aboutImage}
+        imageSrc={valuesImage}
         altText="a field of wheat"
         label="Our Values"
         borderColor="border-primary-500"
@@ -64,7 +66,7 @@ const image = "/hero-inner.webp";
       />
 
       <CallToActionWidget />
-      <DataAndStats />
+      <!-- <DataAndStats /> -->
     </div>
   </Container>
   <CtaBanner />

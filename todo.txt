@@ -18,6 +18,7 @@ resources: https://drive.google.com/drive/folders/1RWsREB6daGMpjibFpfstxfnCVa2Sd
 
 
 fixes for wednesday:
-add the (806)410-0584 number to the site/contact us? - check with Joe
 fix orange boxes on ios
-test forms(both)
+add the (806)410-0584 number to the site/contact us? - check with Joe
+
+please fix wheat images
